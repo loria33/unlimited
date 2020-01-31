@@ -1,0 +1,6 @@
+export const CHECK_AVAILABILITY = 'CHECK_AVAILABILITY';
+export const OPEN_DRAWER = 'OPEN_DRAWER';
+export const GET_CITY_INPUT = 'GET_CITY_INPUT';
+export const GET_ROAD_INPUT = 'GET_ROAD_INPUT';
+export const GET_ZIP_CODE = 'GET_ZIP_CODE';
+
