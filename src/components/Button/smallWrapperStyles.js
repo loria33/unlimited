@@ -11,10 +11,6 @@ const smallWrapperStyles = css`
     text-align:${props => props.textAlign?props.textAlign:'unset'};
     display:${props => props.display?props.display:'inline-block'};
     height:${props => props.height?props.height:'inherit'};
-    border:${props => props.border?props.border:'none'};
-    background-color:${props => props.bgColor?props.bgColor:'transparent'};
-    padding-bottom:${props => props.paddingBottom?props.paddingBottom:0};
-    padding-top:${props => props.paddingTop?props.paddingTop:0};
     white-space: normal;
     @media only screen and (max-width:1400px) {
 

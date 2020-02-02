@@ -1,7 +1,7 @@
 
 import { css } from 'styled-components';
 
-const smallWrapperStyles = css`
+const searchBoxStyles = css`
     margin-top:${props => props.marginTop};
     margin-bottom:${props => props.marginBottom};
     margin-right:${props => props.marginRight};
@@ -11,17 +11,8 @@ const smallWrapperStyles = css`
     text-align:${props => props.textAlign?props.textAlign:'unset'};
     display:${props => props.display?props.display:'inline-block'};
     height:${props => props.height?props.height:'inherit'};
-    border:${props => props.border?props.border:'none'};
-    background-color:${props => props.bgColor?props.bgColor:'transparent'};
-    padding-bottom:${props => props.paddingBottom?props.paddingBottom:0};
-    padding-top:${props => props.paddingTop?props.paddingTop:0};
     white-space: normal;
-    @media only screen and (max-width:1400px) {
-
-    } 
-    @media only screen and (max-width:1100px) {
-       
-    } 
+    
     @media only screen and (max-width:868px) {
         width: ${props => props.respwidth?props.respwidth:props.width};
         text-align:${props => props.respAlign?props.respAlign:props.textAlign?props.textAlign:'unset'};
@@ -31,4 +22,4 @@ const smallWrapperStyles = css`
     } 
 `;
 
-export default smallWrapperStyles;
+export default searchBoxStyles;

@@ -3,7 +3,7 @@
 import { css } from 'styled-components';
 
 const menuStyles = css`
-        display: flex;
+        display: ${props => props.open? 'flex' : 'none'};
         flex-direction: column;
         background: black;
         height: 100vh;
@@ -19,6 +19,9 @@ const menuStyles = css`
 
         @media (max-width: 868px) {
             width: 100%;
+        }
+        @media (min-width: 868px) {
+            display: none;
         }
         
         a {
