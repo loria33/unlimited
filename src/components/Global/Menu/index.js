@@ -6,25 +6,25 @@
 
 import React from 'react';
 import StyledMenu from './styledMenu';
-
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import * as homepageActions from '../../../_actions/homepageActions'
 
 function Menu(props) {
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(homepageActions.openDrawer(false));
+  }
+
   return (
 
     <StyledMenu open={props.open}>
-    <a href="/">
-      <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
-      About us
-    </a>
-    <a href="/">
-      <span role="img" aria-label="price">&#x1f4b8;</span>
-      Pricing
-      </a>
-    <a href="/">
-      <span role="img" aria-label="contact">&#x1f4e9;</span>
-      Contact
-      </a>
-  </StyledMenu>
+              <Link to="/" onClick={handleClick} >Home</Link>
+              <Link to="/SearchResults" onClick={handleClick} >SearchResults</Link>
+              <Link to="/Articles" onClick={handleClick} >Articles</Link>
+    </StyledMenu>
 
   
   );

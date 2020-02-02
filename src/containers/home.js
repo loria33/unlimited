@@ -1,8 +1,12 @@
-import React from 'react'; 
+import React, {useEffect} from 'react'; 
 import { useSelector, useDispatch } from "react-redux";
 import {incrementNumber,} from "../_actions/number";
 
 function Home() {
+
+  useEffect(() => {
+    console.log('Home rendered');
+  }, []);
 
   const dispatch = useDispatch();
   const number = useSelector(state => state.number);
@@ -13,7 +17,7 @@ function Home() {
 
     return (
     <div>
-    <h2>Check Availability</h2>
+    <h2>Check</h2>
     
     {number.clickedNumber || 0}<br />
             <button onClick={handleClick}>

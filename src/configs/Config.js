@@ -1,13 +1,13 @@
 const Config = {
     
     baseUrl : 'https://api.unlimited',
-    baseUrl : 'https://google.api',
+    googleBaseUrl : 'https://maps.googleapis.com/maps/api/geocode/json?',
+    googleApiKey : 'AIzaSyAeAsLQ2YVwf-EQt9z0agasFElXwurlWXA',
     methods : {
         searchByAdress : {
             description: "Get conversation list for user per org",
             isAuthenticated : true,
             verb : 'POST',
-            sendDeviceKey : true,
             jsonMethod : true,
             suffixUrl : '/conversations',
             showLoader : true,
@@ -16,8 +16,7 @@ const Config = {
         getCoordinatesFromAddress : {
             description: "Get coordinates from adress via Google Api",
             isAuthenticated : true,
-            verb : 'POST',
-            sendDeviceKey : true,
+            verb : 'GET',
             jsonMethod : true,
             suffixUrl : '/conversations',
             showLoader : true,
@@ -27,7 +26,6 @@ const Config = {
             description: "Get coordinates from adress via Google Api",
             isAuthenticated : true,
             verb : 'POST',
-            sendDeviceKey : true,
             jsonMethod : true,
             suffixUrl : '/conversations',
             showLoader : true,
