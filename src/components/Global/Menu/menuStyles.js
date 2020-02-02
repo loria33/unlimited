@@ -3,7 +3,7 @@
 import { css } from 'styled-components';
 
 const menuStyles = css`
-        display: ${props => props.open? 'flex' : 'none'};
+        display:flex;
         flex-direction: column;
         background: black;
         height: 100vh;

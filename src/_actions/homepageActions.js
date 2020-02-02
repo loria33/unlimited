@@ -24,3 +24,9 @@ export function zipCode(zipText) {
         payload: zipText
     }
 }
+export function adrressToCoordinates(road,city) {
+    return {
+        type: ActionTypes.GET_ZIP_CODE,
+        payload: zipText
+    }
+}

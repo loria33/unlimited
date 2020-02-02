@@ -16,6 +16,7 @@ const smallWrapperStyles = css`
     padding-bottom:${props => props.paddingBottom?props.paddingBottom:0};
     padding-top:${props => props.paddingTop?props.paddingTop:0};
     white-space: normal;
+    border-radius:${props => props.borderRadius?props.borderRadius:0};
     @media only screen and (max-width:1400px) {
 
     } 
