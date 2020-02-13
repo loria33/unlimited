@@ -37,7 +37,7 @@ function Header(props) {
   }, []);
   
   const handleClick = () => {
-    debugger;
+    ;
   }
     return (      
       <>

@@ -1,35 +1,33 @@
+
 const Config = {
     
-    baseUrl : 'https://api.unlimited',
+    baseUrl : 'http://localhost:9000',
+    strapiUrl:'http://localhost:1337',
     googleBaseUrl : 'https://maps.googleapis.com/maps/api/geocode/json?',
-    googleApiKey : 'AIzaSyAeAsLQ2YVwf-EQt9z0agasFElXwurlWXA',
     methods : {
-        searchByAdress : {
-            description: "Get conversation list for user per org",
-            isAuthenticated : true,
-            verb : 'POST',
-            jsonMethod : true,
-            suffixUrl : '/conversations',
-            showLoader : true,
-            isFlatResponse: false
-        },
-        getCoordinatesFromAddress : {
+        callNodeApi : {
+            url:'baseUrl',
             description: "Get coordinates from adress via Google Api",
             isAuthenticated : true,
             verb : 'GET',
             jsonMethod : true,
-            suffixUrl : '/conversations',
+            suffixUrl : '/unlimitedApi?address={address}',
             showLoader : true,
-            isFlatResponse: false
+            isFlatResponse: false,
+            returnMethod:'json',
+            returnObject:-1,
         },
-        createLead : {
-            description: "Get coordinates from adress via Google Api",
+        blogcategories : {
+            url:'strapiUrl',
+            description: "Get Categories from CMS",
             isAuthenticated : true,
-            verb : 'POST',
+            verb : 'GET',
             jsonMethod : true,
-            suffixUrl : '/conversations',
+            suffixUrl : '/blog-categories',
             showLoader : true,
-            isFlatResponse: false
+            isFlatResponse: false,
+            returnMethod:'json',
+            returnObject:-1,
         },
     },
 

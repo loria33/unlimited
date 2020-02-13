@@ -20,7 +20,12 @@ function SearchBox(props) {
     const roadText = useSelector(state => state.homepageReducer.roadText);
 
     const handleClick = (e) => {    
-        dispatch(homepageActions.roadInput(e.target.value));
+        ;
+        // let currcityText = useSelector(state => state.homepageReducer.cityText);
+         //let currroadText = useSelector(state => state.homepageReducer.roadText);
+
+         dispatch(homepageActions.adrressToCoordinates(roadText,cityText));
+         
     } 
     
     const handleChangeRoad = (e) => {

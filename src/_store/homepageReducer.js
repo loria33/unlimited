@@ -5,6 +5,7 @@ const initialState = {
     roadText:'',
     zipText:'',
     openDrawerflag:false,
+    blogCategories:[],
 }
 
 export default function(state=initialState,action){
@@ -22,6 +23,14 @@ export default function(state=initialState,action){
             return {
                 ...state, openDrawerflag: action.payload 
         }
+        case ActionTypes.GET_CMS_SUCCESS:
+            return {
+                ...state, blogCategories:action.payload 
+            }
+        case ActionTypes.GET_CMS_FAIL:
+            return {
+                ...state, blogCategories:[]
+            }
         default:
             return state;
     }
