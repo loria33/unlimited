@@ -1,10 +1,10 @@
 import React from 'react'; 
 import {
-  BrowserRouter as Router,
+  Router,
   Switch,
   Route,
 } from "react-router-dom";
-
+import  history from './helpers/history';
 import { useSelector } from "react-redux";
 
 //components
@@ -22,8 +22,8 @@ function App() {
   const openDrawer = useSelector(state => state.homepageReducer.openDrawerflag);
 
   return (
-    <Router>
-       <div style={{ display: 'flex',backgroundColor:'gray' ,flexDirection: 'column', fontSize: '2rem' }}>
+    <Router history={history}>
+       <div style={{ display: 'flex',backgroundColor:'gray' ,flexDirection: 'column', fontSize: '2rem',overflow:'hidden',WebkitOverflowScrolling:'touch'}}>
         <Header open={openDrawer}/>
         <Menu open={openDrawer}/>
           <Switch>

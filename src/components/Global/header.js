@@ -42,13 +42,13 @@ function Header(props) {
     return (      
       <>
       <FlexContainer>
-        <SmallWrapper width='40%' marginLeft='6vw' respwidth='80%'>
-            <SmallWrapper float='left' marginRight='4vw'>
+        <SmallWrapper width='40%' marginRight='6vw' respwidth='100%' >
+            <SmallWrapper class='abcd' float='right' marginRight='4vw'>
               <BurgerMenu open={props.open}>
                 <img src={menuIcon} alt='menu icon' style={{width:'1rem'}} />
               </BurgerMenu>
             </SmallWrapper>
-            <SmallWrapper float='left' marginRight='4vw' >
+            <SmallWrapper float='right' marginRight='4vw' >
                <span style={{fontSize:'30px'}}>Unlimited</span>   
             </SmallWrapper>
         </SmallWrapper>

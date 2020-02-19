@@ -15,6 +15,7 @@ const smallWrapperStyles = css`
     background-color:${props => props.bgColor?props.bgColor:'transparent'};
     padding-bottom:${props => props.paddingBottom?props.paddingBottom:0};
     padding-top:${props => props.paddingTop?props.paddingTop:0};
+    position:${props => props.position?props.position:'unset'};
     white-space: normal;
     border-radius:${props => props.borderRadius?props.borderRadius:0};
     @media only screen and (max-width:1400px) {

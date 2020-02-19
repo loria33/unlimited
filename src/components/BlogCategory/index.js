@@ -7,6 +7,7 @@
 import React, { memo } from 'react';
 import StyledBlogCat from './styledBlogCat'
 import SmallWrapper from '../SmallWrapper';
+import BlogItem from '../BlogItem'
 
 
 
@@ -21,10 +22,10 @@ function BlogCateGory(props) {
             </SmallWrapper>
             <SmallWrapper>
                                   {props.blogItems.map(function(d, idx){
-                                    ;
+                                   
                                     return (
                                       <SmallWrapper>
-                                           <span key={d.Title+idx}>item {idx}</span>
+                                          <BlogItem d={d}></BlogItem>
                                       </SmallWrapper>
                                         
                                         )

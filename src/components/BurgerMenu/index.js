@@ -16,10 +16,15 @@ function BurgerMenu(props) {
   const isDrawerOpen = props.open;
   
   const handleClick = () => {
-    if(isDrawerOpen)
-        dispatch(homepageActions.openDrawer(false));
-    else
-        dispatch(homepageActions.openDrawer(true));
+    if(isDrawerOpen){
+      document.body.style.overflow = "scroll"
+      dispatch(homepageActions.openDrawer(false));
+    }
+    else {
+      document.body.style.overflow = "hidden"
+      dispatch(homepageActions.openDrawer(true));
+    }
+      
   }
 
   return (

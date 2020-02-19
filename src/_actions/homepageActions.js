@@ -1,6 +1,6 @@
 import * as ActionTypes from '../configs/Types/homepageTypes';
 import homepageProvider from '../providers/homepageProvider'
-
+import history from '../helpers/history';
 export function openDrawer(openDrawerflag) {
     return {
         type: ActionTypes.OPEN_DRAWER,
@@ -30,6 +30,7 @@ export function adrressToCoordinates(road,city) {
              homepageProvider.callUnlimitedApi(road,city).then((results) => {
                 if(results) {
                     dispatch(getAddressSuccess(results));
+                    history.push('/SearchResults');
                 }
                 else { 
                     dispatch(getAddressFail(false));

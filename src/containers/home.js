@@ -8,7 +8,7 @@ import Blog from '../components/Blog';
 import * as homepageActions from '../_actions/homepageActions';
 
 function Home() {
-  ;
+  
   const dispatch = useDispatch();
   const blogCats = useSelector(state => state.homepageReducer.blogCategories);
  
@@ -23,7 +23,7 @@ function Home() {
     
     <Img src={contact} width={'100%'} height={'30vh'}
          respheight={'15vh'} />
-    <SearchBox />
+    {/*<SearchBox />*/}
     <Blog blogCats={blogCats}></Blog>
 
     

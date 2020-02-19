@@ -1,20 +1,28 @@
 
 import { css } from 'styled-components';
 
-const blogItemStyles = css`
+const mapStyles = css`
     margin-top:${props => props.marginTop};
     margin-bottom:${props => props.marginBottom};
     margin-right:${props => props.marginRight};
     margin-left:${props => props.marginLeft};
     width:${props => props.width};
-    max-width:500px;
     float:${props => props.float?props.float:'none'};
     text-align:${props => props.textAlign?props.textAlign:'unset'};
     display:${props => props.display?props.display:'inline-block'};
     height:${props => props.height?props.height:'inherit'};
-    font-size:${props => props.fontSize?props.fontSize:'1rem'};
+    border:${props => props.border?props.border:'none'};
+    background-color:${props => props.bgColor?props.bgColor:'transparent'};
+    padding-bottom:${props => props.paddingBottom?props.paddingBottom:0};
+    padding-top:${props => props.paddingTop?props.paddingTop:0};
     white-space: normal;
-    
+    border-radius:${props => props.borderRadius?props.borderRadius:0};
+    @media only screen and (max-width:1400px) {
+
+    } 
+    @media only screen and (max-width:1100px) {
+       
+    } 
     @media only screen and (max-width:868px) {
         width: ${props => props.respwidth?props.respwidth:props.width};
         text-align:${props => props.respAlign?props.respAlign:props.textAlign?props.textAlign:'unset'};
@@ -24,4 +32,4 @@ const blogItemStyles = css`
     } 
 `;
 
-export default blogItemStyles;
+export default mapStyles;

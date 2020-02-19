@@ -5,20 +5,21 @@ import { css } from 'styled-components';
 const menuStyles = css`
         display:flex;
         flex-direction: column;
-        background: black;
         height: 100vh;
-        text-align: left;
-        padding: 50px 10px 10px 6vw;
+        text-align: right;
+        padding: 50px 9vw 10px 20px;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         color:red;
         transition: transform 0.3s ease-in-out;
-        transform: translateX(-100%);
-        transform: ${props => props.open? 'translateX(0%)' : 'translateX(-100%)'};
+        transform: ${props => props.open? 'translateX(0%)' : 'translateX(100%)'};
+        background-color: rgb(59,59,59,0.9);
+       
+        overflow-x: hidden;
 
         @media (max-width: 868px) {
-            width: 100%;
+            width: 80%;
         }
         @media (min-width: 868px) {
             display: none;

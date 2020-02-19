@@ -6,6 +6,7 @@ const initialState = {
     zipText:'',
     openDrawerflag:false,
     blogCategories:[],
+    getAddress:[],
 }
 
 export default function(state=initialState,action){
@@ -30,6 +31,10 @@ export default function(state=initialState,action){
         case ActionTypes.GET_CMS_FAIL:
             return {
                 ...state, blogCategories:[]
+            }
+        case ActionTypes.GET_ADDRESSES_SUCCESS:
+            return {
+                ...state,getAddress:action.payload
             }
         default:
             return state;
