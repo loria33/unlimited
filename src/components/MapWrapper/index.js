@@ -13,7 +13,7 @@ export default function Map({ props,options, onMount, className, onMountProps })
     if (!window.google) {
       const script = document.createElement(`script`)
       script.src =
-        `https://maps.googleapis.com/maps/api/js?key=AIzaSyAvc-HY1Oh9fu_adVga-MWOxE6Aliqi7ow`
+        `https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXX`
       document.head.append(script)
       script.addEventListener(`load`, onLoad)
       return () => script.removeEventListener(`load`, onLoad)
