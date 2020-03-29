@@ -11,8 +11,8 @@ function Home() {
   
   const dispatch = useDispatch();
   const blogCats = useSelector(state => state.homepageReducer.blogCategories);
- 
   
+
   useEffect(() => {
     dispatch(homepageActions.getCms('/blog-categories'));
   },[dispatch]);
@@ -35,5 +35,7 @@ function Home() {
     </div>
     );
   }
+
+ 
 
 export default Home

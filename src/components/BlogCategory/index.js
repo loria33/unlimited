@@ -17,7 +17,8 @@ function BlogCateGory(props) {
   return (
       <StyledBlogCat marginTop={'20px'} marginBottom={'20px'}
       height={props.height} width={'100%'}  textAlign={'center'} >
-            <SmallWrapper>
+            <SmallWrapper display="block"  >
+                <span style={{fontWeight:'bold'}} >Category : </span>
                 <span key={props.categoryName}>{props.categoryName}</span>
             </SmallWrapper>
             <SmallWrapper>
